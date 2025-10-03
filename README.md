@@ -73,3 +73,95 @@ gcloud run deploy factor-lens `
 
 
 
+# Factor Lens API Documentation
+
+## Base URL
+
+```
+Production: https://factor-lens-1018759291561.us-central1.run.app
+Interactive Docs: https://factor-lens-1018759291561.us-central1.run.app/docs
+```
+
+## Quick Links
+
+- **Interactive API Docs (Swagger UI)**: [/docs](https://factor-lens-1018759291561.us-central1.run.app/docs)
+- **Alternative Docs (ReDoc)**: [/redoc](https://factor-lens-1018759291561.us-central1.run.app/redoc)
+- **OpenAPI Schema**: [/openapi.json](https://factor-lens-1018759291561.us-central1.run.app/openapi.json)
+
+---
+
+## API Overview
+
+The Factor Lens API provides endpoints for cryptocurrency factor analysis, regime detection using Gaussian Mixture Models (GMM), and correlation analysis. All responses are in JSON format.
+
+---
+
+## Endpoints
+
+### 1. Root / Health Check
+
+Get service status and basic information.
+
+**Endpoint:** `GET /`
+
+**URL:** `https://factor-lens-1018759291561.us-central1.run.app/`
+
+---
+
+### 2. Service Status
+
+Get detailed service health status.
+
+**Endpoint:** `GET /api/status`
+
+**URL:** `https://factor-lens-1018759291561.us-central1.run.app/api/status`
+---
+
+### 3. Get Factor Data
+
+Retrieve computed factor data with BTC price.
+
+**Endpoint:** `GET /api/factors`
+
+**URL:** `https://factor-lens-1018759291561.us-central1.run.app/api/factors`
+
+### 4. Get Correlation Matrix
+
+Retrieve correlation matrix between factors.
+
+**Endpoint:** `GET /api/correlation`
+
+**URL:** `https://factor-lens-1018759291561.us-central1.run.app/api/correlation`
+
+### 5. Get Regime Data
+
+Get regime classifications using Gaussian Mixture Model (GMM).
+
+**Endpoint:** `GET /api/regimes/{k}`
+
+**URL:** `https://factor-lens-1018759291561.us-central1.run.app/api/regimes/{k}`
+
+### 6. Rebuild Regime Data
+
+Force recomputation of regime data for a specific k value.
+
+**Endpoint:** `GET /api/regimes/rebuild/{k}`
+
+**URL:** `https://factor-lens-1018759291561.us-central1.run.app/api/regimes/rebuild/{k}`
+
+### 7. Get Available Factors
+
+List all available factors and date range.
+
+**Endpoint:** `GET /api/available-factors`
+
+**URL:** `https://factor-lens-1018759291561.us-central1.run.app/api/available-factors`
+
+
+## Support
+
+- **Interactive Docs**: [https://factor-lens-1018759291561.us-central1.run.app/docs](https://factor-lens-1018759291561.us-central1.run.app/docs)
+
+
+
+
