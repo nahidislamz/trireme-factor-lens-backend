@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+Pipfile.lock
+
+# IDE / Editor files
+.vscode/
+.idea/
+data/
+# Docker cache
+.cg_cache/
+docker-compose.override.yml

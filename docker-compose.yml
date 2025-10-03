@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  factor_lens:
+    build: .
+    container_name: factor_lens_app
+    command: uvicorn Factor_Lens.api:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./Factor_Lens:/app/Factor_Lens
+      - ./data:/app/Factor_Lens/data
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
